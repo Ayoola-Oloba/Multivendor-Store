@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Arima:wght@100..700&family=Lilita+One&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    background-image: linear-gradient(to right, skyblue , white);
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+h1{
+    display: flex;
+    align-items: center;
+    font-family: "Roboto";
+}
+a{
+    font-size: 25px;
+    font-family: "Arima";
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background-image: url("wearsbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 107%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+#Wears{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+.rae, .vhikky, .heritage, .vicky, .grace, .essie, .alimi, .zeenat, .faiza, .lifted{
+    max-width: 20em;
+    width: 100%;
+    height: 17vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
+    position: relative;
+    text-align: center;
+}
+.rae{
+    background-image: url("barbie.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.vhikky{
+    background-image: url("cbg1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.heritage{
+    background-image: url("heritage.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.vicky{
+    background-image: url("colored-womens-summer-clothes-hanger-gray-background_176873-9771.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.grace{
+    background-image: url("light-colored-womens-summer-clothes-hanger_176873-9804.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.essie{
+    background-image: url("esther.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.alimi{
+    background-image: url("blue\ clothing\ material.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.zeenat{
+    background-image: url("How-To-Style-and-Wear-Mens-Accessories.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.faiza{
+    background-image: url("female-summer-wardrobe-white-room_176873-12954.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.lifted{
+    background-image: url("wig.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.faiza, .lifted{
+    border: 1px black solid;
+}
+.rae a{
+    color: black;
+}
+/* .vhikky a{
+    color: white;
+} */
+/* .vicky a{
+    color: royalblue;
+} */
+.alimi a{
+    color: white;
+}
+.lifted a{
+    color: darkblue;
+}
+
+@media screen and (max-width:1028px){
+    .container{
+        max-width: 900px;
+    }
+    a{
+        font-size: 20px;
+    }
+    .rae, .vhikky, .heritage, .vicky, .grace, .essie, .alimi, .zeenat, .faiza, .lifted{
+        max-width: 20em;
+        width: 100%;
+        height: 20vh;
+    }
+    .overlay{
+        height: 119%;
+    }
+}
+@media screen and (max-width:891px){
+    .container{
+        max-width: 700px;
+    }
+    a{
+        font-size: 20px;
+    }
+    /* .overlay{
+        height: 146.2%;
+    } */
+}
+@media screen and (max-width:720px){
+    h1{
+        font-size: 20px;
+    }
+    a{
+        padding: 20px;
+        font-size: 20px;
+    }
+    #Wears{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+    }
+    .rae, .vhikky, .heritage, .vicky, .grace, .essie, .alimi, .zeenat, .faiza, .lifted{
+        height: 17vh;
+    }
+    .overlay{
+        height: 129.1%;
+    }
+}
+@media screen and (max-width:500px){
+    #Wears{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .overlay{
+        height: 211%;
+    }
+}

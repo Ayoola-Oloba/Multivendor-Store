@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Arima:wght@100..700&family=Lilita+One&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 237, 237);
+    padding:0px 20px;
+}
+h1{
+    color: deepskyblue;
+    font-family: "Roboto";
+}
+h1:hover{
+    color: darkgrey;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* justify-content: space-between; */
+}
+nav a{
+    color: darkslateblue;
+    font-family: "Playwrite England SemiJoined";
+}
+nav a:hover{
+    color: lightslategray;
+}
+.about{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 74vh;
+    background-color: whitesmoke;
+    padding: 1em;
+    margin: 2em 0;
+    text-align: justify;
+}
+h2{
+    font-family: "arima";
+}
+.about p{
+    font-weight: 800;
+    font-family: "roboto";
+}
+hr{
+    margin: 0 5em;
+}
+footer{
+    background-color: rgb(230, 229, 229);
+}
+.down{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.down a{
+    color: rgb(1, 1, 59);
+}
+.down a:hover{
+    color: rgb(164, 200, 212);
+}
+
+@media screen and (max-width:940px){
+    .container{
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width:720px){
+    .container{
+        max-width: 500px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .about{
+        height: 76vh;
+    }
+    h3{
+        font-size: 16px
+    }
+    a{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:517px){
+    .container{
+        max-width: 400px;
+    }
+    h3{
+        font-size: 15px
+    }
+    a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:417px){
+    .container{
+        max-width: 310px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+}

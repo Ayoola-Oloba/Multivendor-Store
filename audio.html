@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let audio = document.getElementById('audioPlayer');
+      if (!audio) {
+        audio = new Audio('LIKE THAT (1).mp3');
+        audio.id = 'audioPlayer';
+        audio.loop = true;
+        document.body.appendChild(audio);
+      }
+
+      // Set playback position from local storage
+      let savedTime = localStorage.getItem('audioCurrentTime');
+      if (savedTime) {
+        audio.currentTime = parseFloat(savedTime);
+      }
+      
+      audio.play();
+
+      // Save playback position to local storage
+      audio.addEventListener('timeupdate', function () {
+        localStorage.setItem('audioCurrentTime', audio.currentTime);
+      });
+
+      // Clear playback position on unload (optional)
+      window.addEventListener('beforeunload', function () {
+        localStorage.removeItem('audioCurrentTime');
+      });
+    });
+  </script>
+</head>
+<body>
+  <audio id="audioPlayer" controls style="display:none;">
+    <source src="LIKE THAT (1).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <!-- <audio id="track1" src="alan_walker_amp_ava_max_alone_pt._ii_mp3_73136.mp3" preload="auto"></audio>
+<audio id="track2" src="LIKE THAT (1).mp3" preload="auto"></audio>
+<audio id="track3" src="tiwa_savage_ayra_starr_young_jonn_stamina_official_video_aac_79789.m4a" preload="auto"></audio>
+
+<script>
+    function playTrack(trackId) {
+        stopAllTracks();
+        var track = document.getElementById(trackId);
+        track.play();
+    }
+
+    function stopAllTracks() {
+        var tracks = document.querySelectorAll('audio');
+        tracks.forEach(function(track) {
+            track.pause();
+            track.currentTime = 0;
+        });
+    }
+</script> -->
+</body>
+</html>
