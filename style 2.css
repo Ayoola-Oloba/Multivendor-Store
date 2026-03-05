@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Arima:wght@100..700&family=Lilita+One&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    background: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    }
+header{
+        background-color: rgb(233, 241, 245);
+    }
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+.navbar a{
+    margin: 1px 5px;
+    color: rgb(99, 89, 89);
+    font-weight: 900;
+}
+.home a{
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(85, 128, 85);
+    padding: 0px 10px;
+    font-family: "Playwrite England SemiJoined";
+}
+.home a:hover{
+    color: lightskyblue;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+main{
+     position: relative;
+}
+.intro{
+    z-index: 101;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    padding-top: 1em;
+    gap: 10px;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 40px;
+}
+.special{
+    font-family: "Roboto";
+}
+.intro p{
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+.cloth, .food, .shelter, .tech{
+    max-width: 15em;
+    width: 100%;
+    text-align: center;
+    border: 2px whitesmoke solid;
+    border-radius: 15px ;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+    transition: all 0.5s linear;
+}
+.cloth:hover, .food:hover, .shelter:hover, .tech:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+h2{
+    color: white;
+    font-family: "arima";
+    z-index: 101;
+}
+.cloth h2, .food h2{
+    color: black;
+}
+.cloth p, .food p{
+    font-weight: 900;
+    color: black;
+    z-index: 101;
+}
+.shelter p, .tech p{
+    font-weight: 900;
+    color: white;
+    z-index: 101;
+}
+.cloth{
+    background-image: url("shoe\ 6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.food{
+    background-image: url("circle.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shelter{
+    background-image: url("right.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tech{
+    background-image: url("tech.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+.second-page{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    gap: 50px;
+    padding: 2em;
+}
+footer{
+    width: 100%;
+    padding: 5px;
+    /* background-color: rgb(235, 224, 206); */
+    background-color: rgb(24, 21, 21);
+}
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.oia{
+    flex: 2;
+    text-align: left;
+    color: white;
+}
+.about{
+    flex: 1;
+}
+.contact{
+    flex: 1;
+}
+.about a, .contact a{
+    font-weight: 800;
+    /* color: darkslateblue; */
+    color: whitesmoke;
+}
+.about a:hover, .contact a:hover{
+    color: lightslategray;
+}
+footer p{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:960px){
+    .container{
+        max-width: 750px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .home a{
+        font-size: 30px;
+    }
+    header .container{
+        display: block;
+    }
+}
+
+@media screen and (max-width:790px){
+    .container{
+        max-width: 680px;
+    }
+a{
+    font-size: 15px;
+    }
+h2{
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width:720px){
+    .container{
+        max-width: 580px;
+    }
+    .home a{
+        font-size: 20px;
+    }
+    .top{
+        padding: 0.25em;
+    }
+    a{
+        font-size: 12px;
+    }
+    .intro p{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:620px){
+    .container{
+        max-width: 500px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .home a{
+        font-size: 20px;
+        padding: 0px 5px;
+    }
+   .intro p{
+        font-size: 12px;
+    }
+    h3, .oia p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:530px){
+    .container{
+        max-width: 380px;
+    }
+    .cloth, .food, .shelter, .tech{
+        padding: 10px;
+        height: 20vh;
+    }
+    footer p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:400px){
+    .container{
+        max-width: 340px;
+    }
+    .second-page{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .cloth, .food, .shelter, .tech{
+        max-width: 20em;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .second-page p{
+        font-size: 17px;
+        height: auto;
+    }
+    .foot{
+        display: block;
+        text-align: left;
+    }
+    footer p{
+        font-size: 13px;
+    }
+    /* .cloth:hover, .food:hover, .shelter:hover, .tech:hover{
+        transform: scale(1.05);
+    } */
+}
